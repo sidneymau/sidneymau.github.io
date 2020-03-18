@@ -13,35 +13,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <style>
+        @media (prefers-color-scheme: light) {
+             body {background-color: #FFFFFF; color: #000000;}
+             header {color: #EEEEEE;}
+             .fa {color: black;}
+             .ai {color: black;}
+         }
+         @media (prefers-color-scheme: dark) {
+             body {background-color: #111111; color: #EEEEEE;}
+             header {color: #222222;}
+             .fa {color: #EEEEEE;}
+             .ai {color: #EEEEEE;}
+         }
         .fa {
-          color: black;
           font-size: 3em;
           text-align: none;
           text-decoration: none;
         }
         .ai {
-          color: black;
           font-size: 3em;
           text-align: none;
           text-decoration: none;
+        }
     </style>
   </head>
   <body class="w-100 mw8 center sans-serif">
-    <header class="w-100 pa3 bg-white bb b--light-gray">
+    <header class="w-100 pa3 bb">
       <div class="db dt-ns center w-100">
         <div class="db dtc-ns v-mid tl w-50">
-          <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link mid-gray">Sidney Mau</a>
+          <a href="/" class="dib f5 f4-ns fw6 mt0 mb1 link gray">Sidney Mau</a>
         </div>
         <nav class="db dtc-ns v-mid w-100 tl tr-ns mt2 mt0-ns">
-          <a href="/" class="f6 fw6 link gray hover-black mr2 mr3-m mr4-l dib">Home</a>
-          <a href="/research/" class="f6 fw6 link gray hover-black mr2 mr3-m mr4-l dib">Research</a>
-          <a href="/cv/" class="f6 fw6 link gray hover-black mr2 mr3-m mr4-l dib">CV</a>
-          <a href="/about-me/" class="f6 fw6 link gray hover-black mr2 mr3-m mr4-l dib">About Me</a>
+          <a href="/" class="f6 fw6 link gray dim mr2 mr3-m mr4-l dib">Home</a>
+          <a href="/research/" class="f6 fw6 link gray dim mr2 mr3-m mr4-l dib">Research</a>
+          <a href="/cv/" class="f6 fw6 link gray dim mr2 mr3-m mr4-l dib">CV</a>
+          <a href="/about-me/" class="f6 fw6 link gray dim mr2 mr3-m mr4-l dib">About Me</a>
         </nav>
       </div>
     </header>
 
-    <main class="w-100 bg-white">
+    <main class="w-100">
 
       <div class="pa3">
         <div class="cf">
@@ -50,8 +61,8 @@
           </div>
           <div class="fl w-100 w-50-l pv3">
             I am a fourth-year undergraduate Physics major at the University of Chicago.
-            I currently work with Professor <a href="https://home.fnal.gov/~kadrlica/">Alex Drlica-Wagner</a> on the Dark Energy Survey, and Professor <a href="https://hep.uchicago.edu/~oreglia/">Mark Oreglia</a> on the ATLAS Experiment.
-            Before that, I worked with Dr. <a href="https://scholar.google.com/citations?user=NRQ3EuMAAAAJ&hl=en">Scott C. Dudley</a> to explore classroom physics with smartphone sensors at TASIS England.
+            I currently work with Professor <a class="link blue dim" href="https://home.fnal.gov/~kadrlica/">Alex Drlica-Wagner</a> on the Dark Energy Survey, and Professor <a class="link blue dim" href="https://hep.uchicago.edu/~oreglia/">Mark Oreglia</a> on the ATLAS Experiment.
+            Before that, I worked with Dr. <a class="link blue dim" href="https://scholar.google.com/citations?user=NRQ3EuMAAAAJ&hl=en">Scott C. Dudley</a> to explore classroom physics with smartphone sensors at TASIS England.
             <div class="dt dt--fixed pa3 mw6 mw7-l center">
               <div title="email" class="dtc pa2 pa3-l"><a href="mailto:sidneymau@gmail.com" class="fa fa-envelope grow"></a></div>
               <div title="arXiv" class="dtc pa2 pa3-l"><a href="https://arxiv.org/search/astro-ph?searchtype=author&query=Mau%2C+S" class="ai ai-arxiv grow"></a></div>
