@@ -14,6 +14,44 @@
       html {
         scroll-behavior: smooth;
       }
+      #fade {
+        animation: fadein 1s;
+        -moz-animation: fadein 1s; /* Firefox */
+        -webkit-animation: fadein 1s; /* Safari and Chrome */
+        -o-animation: fadein 1s; /* Opera */
+      }
+      @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-o-keyframes fadein { /* Opera */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
       @media (prefers-color-scheme: light) {
         body {background-color: #FFFFFF; color: #000000;}
         header {background-color: #FFFFFF; color: #EEEEEE;}
@@ -34,7 +72,7 @@
       </nav>
     </header>
 
-    <main class="pl7-l lh-copy">
+    <main id="fade" class="pl7-l lh-copy">
 
       <!--Home-->
       <div id="home" class="pb4-l bb b--light-gray">
