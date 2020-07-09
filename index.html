@@ -55,15 +55,17 @@
       @media (prefers-color-scheme: light) {
         body {background-color: #FFFFFF; color: #000000;}
         header {background-color: #FFFFFF; color: #EEEEEE;}
+        .shadow { box-shadow: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ); }
       }
       @media (prefers-color-scheme: dark) {
         body {background-color: #111111; color: #EEEEEE;}
         header {background-color: #111111; color: #333333;}
+        .shadow { box-shadow: 0px 0px 8px 2px rgba( 255, 255, 255, 0.2 ); }
       }
     </style>
   </head>
   <body class="sans-serif">
-    <header class="w5-l w-100 h-100-l pl4-l pl3 shadow-2 fixed">
+    <header class="w5-l w-100 h-100-l pl4-l pl3 shadow fixed">
       <nav class="">
         <a href="#home"     class="db-l dib f4 mt4-l mv3 link gray dim">Sidney Mau</a>
         <a href="#research" class="db-l dib f5 mv3 link gray dim">Research</a>
