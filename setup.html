@@ -88,7 +88,7 @@
               </p>
               <p>
                 While not all scientific computing happens in a terminal, a significant amount does, and it can be a great tool once you're familiar with it.
-                In fact, even if you don't primarily use a terminal, it's almost guranteed that you will use it to some extent; therefore, it's worth at least becoming comfortable with the terminal.
+                In fact, even if you don't primarily use a terminal, it's almost guaranteed that you will use it to some extent; therefore, it's worth at least becoming comfortable with the terminal.
               </p>
               <p>
                 In principle, any terminal is going to be more or less the same; we will walk through how to get started and what options are available below.
@@ -107,7 +107,7 @@
                 <summary class="">Windows</summary>
                 <p>
                   If you anticipate using computational tools heavily, you may want to strongly consider using the <a class="link dim" href="https://docs.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux</a> (WSL).
-                  This provides a Linux shell accessible within your user space on Windows and will allow you to run softwares made for Linux (which includes a large number of scientific software).
+                  This provides a Linux shell accessible within your user space on Windows and will allow you to run software made for Linux (which includes a large number of scientific software).
                   A number of Linux distributions are available for WSL; if you have no or limited prior experience with Linux, <a class="link dim" href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?cid=msft_web_chart&activetab=pivot:overviewtab">Ubuntu</a> is typically a good place to start.
                 </p>
                 <p>
@@ -149,7 +149,7 @@
                 Text editors typically come in three varieties: command line text editors, graphical text editors, and integrated development environments.
                 Command line text editors run directly inside your terminal; they are idiomatic in a terminal-based workflow, but can be difficult to use effectively at first (that said, the payoff is great if you do become familiar with them).
                 Graphical text editors are more "modern" in that they run as a graphical program similar to most applications; these will likely feel more natural for those who were born after 2000.
-                Integrated development envrionments (IDEs) are graphical programs which include a text editor among many other tools related for software development; they can be overwhelming at first and many of their features go beyond what is typically needed by scientists of their computer programs; note that most IDEs are tailored for specific programming languages (e.g., Python).
+                Integrated development environments (IDEs) are graphical programs which include a text editor among many other tools related for software development; they can be overwhelming at first and many of their features go beyond what is typically needed by scientists of their computer programs; note that most IDEs are tailored for specific programming languages (e.g., Python).
               </p>
               <p>
                 The easiest option for any of the operating systems below is to use a graphical text editors, as these will not have the steep learning curve typically associated with command line text editors while not being as overwhelming as IDEs; indeed, they work excellently for most people that do scientific computing.
@@ -165,7 +165,7 @@
                   A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of <code>nano</code> with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
                 </p>
                 <p>
-                  While the preinstalled application <code>TextEdit.app</code> is capable of editing files, it lacks any feautres that are useful for writing code.
+                  While the preinstalled application <code>TextEdit.app</code> is capable of editing files, it lacks any features that are useful for writing code.
                   There are many great graphical text editors available for macOS, including <a class="link dim" href="https://atom.io/">Atom</a>, <a class="link dim" href="https://code.visualstudio.com/">VS Code</a>, and <a class="link dim" href="https://www.sublimetext.com/">Sublime Text</a>.
                 </p>
                 <p>
@@ -181,7 +181,7 @@
                   A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of a rudimentary text editor, <code>nano</code>, with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
                 </p>
                 <p>
-                  While the preinstalled application <code>Notepad.app</code> is capable of editing files, it lacks many of the feautres that are useful for writing code.
+                  While the preinstalled application <code>Notepad.app</code> is capable of editing files, it lacks many of the features that are useful for writing code.
                   There are many great graphical text editors available for Windows, including <a class="link dim" href="https://atom.io/">Atom</a>, <a class="link dim" href="https://code.visualstudio.com/">VS Code</a>, and <a class="link dim" href="https://www.sublimetext.com/">Sublime Text</a>.
                 </p>
                 <p>
@@ -208,7 +208,7 @@
               <details>
                 <summary class="">Chrome OS</summary>
                 <p>
-                  Because of the nature of using the Linux container, the specifics for Chome OS are the same as those for Linux.
+                  Because of the nature of using the Linux container, the specifics for Chrome OS are the same as those for Linux.
                 </p>
                 <p>
                   The default text editor for Debian is <code>nano</code>, but <code>vim</code> should also be preinstalled.
@@ -231,7 +231,7 @@
                 Therefore, if you anticipate needing to run code or work with data on anything other than your local machine, you will need a way of connecting to these remote computing clusters.
               </p>
               <p>
-                The remote connection protocal used in most computing is SSH (Secure SHell).
+                The remote connection protocol used in most computing is SSH (Secure SHell).
                 The typical syntax for connecting to a computer with SSH is
               </p>
               <pre>ssh {username}@{computer.domain}</pre>
@@ -247,7 +247,7 @@
                 <summary class="">Windows</summary>
                 <p>
                   Windows comes with an implementation of SSH.
-                  If you are using WSL, the Linux distrubiton should also come with SSH; if it does not, the <a class="link dim" href="https://www.openssh.com/">OpenSSH</a> implementation should be readily available through the distribution's package manager.
+                  If you are using WSL, the Linux distribution should also come with SSH; if it does not, the <a class="link dim" href="https://www.openssh.com/">OpenSSH</a> implementation should be readily available through the distribution's package manager.
                 </p>
               </details>
 
@@ -275,14 +275,14 @@
               </p>
               <p>
                 While the general community is slowly moving towards <a class="link dim" href="https://wayland.freedesktop.org/">Wayland</a> (a modern replacement for X), scientific computing tends to adopt new technologies more slowly given the dependence on legacy software.
-                As such, it is generally useful to have an installation of X (or some compatability) on your local machine, especially if you are running older codes or connecting to remote machines.
+                As such, it is generally useful to have an installation of X (or some compatibility) on your local machine, especially if you are running older codes or connecting to remote machines.
               </p>
 
               <details>
                 <summary class="">macOS</summary>
                 <p>
                   The standard macOS implementation of X is <a class="link dim" href="https://www.xquartz.org/">XQuartz</a>.
-                  It is generally recommended that you install XQuartz (along with other useful softwares) via a minimal installation of Xcode:
+                  It is generally recommended that you install XQuartz (along with other useful software) via a minimal installation of Xcode:
                   <pre>xcode-select --install</pre>
                 </p>
               </details>
@@ -325,7 +325,7 @@
             <h3>Conda</h3>
 
               <p>
-                <a class="link dim" href="https://docs.conda.io/en/latest/">Conda</a> has become the defacto standard for managing environments as well as installing packages in Python for scientific computing.
+                <a class="link dim" href="https://docs.conda.io/en/latest/">Conda</a> has become the de facto standard for managing environments as well as installing packages in Python for scientific computing.
                 There are several reasons for this; the two most salient are (1) Conda can include non-Python software, which is frequently used in scientific Python packages (importantly, using Python's built-in <code>venv</code> and <code>pip</code> will not always be able to install every necessary dependency for a given scientific library), and (2) Conda environments can be easily shared with others (this is especially useful when trying to make sure that collaborators are using compatible versions of software).
               </p>
               <p>
@@ -410,6 +410,7 @@
               </p>
               <pre>jupyter notebook</pre>
 
+              <!--
               <details>
                 <summary class="">macOS</summary>
                 <p>
@@ -433,6 +434,7 @@
                 <p>
                 </p>
               </details>
+              -->
 
           <!--Git-->
           <h2 id="git">Git</h2>
