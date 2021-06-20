@@ -1,0 +1,465 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>
+      Computing Setup
+    </title>
+    <meta name="author" content="Sidney Mau">
+    <meta name="description" content="Documentation for Scientific Computing Setup">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+    <style>
+      html {
+        font-family: 'Fira Sans', sans-serif;
+        scroll-behavior: smooth;
+      }
+      code {
+        font-family: 'Fira Code', monospace;
+      }
+      pre {
+        padding: 1rem;
+      }
+      details {
+        padding: 1rem;
+      }
+      .link {
+      }
+      @media (prefers-color-scheme: light) {
+        body {background-color: #FFFFFF; color: #000000;}
+        header {background-color: #FFFFFF: #000000;}
+        pre {background-color: #F4F4F4;}
+        .link {color: #0065B3;}
+      }
+      @media (prefers-color-scheme: dark) {
+        body {background-color: #111111; color: #EEEEEE;}
+        header {background-color: #111111; color: #EEEEEE;}
+        pre {background-color: #333333;}
+        .link {color: #9CDCFE;}
+      }
+    </style>
+  </head>
+
+  <body class="">
+
+    <!--
+    <header class="w5-l w-100 h-100-l pl4-l pl3 fixed">
+      <nav class="">
+        <a href="#home"   class="db-l dib f3 mv3 link dim">Home</a>
+        <a href="#tools"  class="db-l dib f4 mv3 link dim">Basic Tools</a>
+        <a href="#python" class="db-l dib f4 mv3 link dim">Python</a>
+        <a href="#git"    class="db-l dib f4 mv3 link dim">Git</a>
+      </nav>
+    </header>
+    -->
+
+    <main id="" class="lh-copy">
+
+      <div id="" class="pa3 mw7 center">
+
+        <!--Home-->
+        <h1 id="home">Setting up Your Computer for Scientific Computing</h1>
+
+          <p>
+            This guide is an attempt to gather some information for setting up your computer for scientific computing.
+          </p>
+          <p>
+            General information is interspersed with advice specific to individual operating systems.
+            This was a conscious choice to show how much of this is (or is not) applicable across systems.
+            Some of you may find that you need to use several operating systems (especially if using computing clusters), in which case it can be helpful to compare more directly.
+          </p>
+          <p>
+            Please note that the advice given here is the result of the authors collective workflows and knowledge over the years; this means that it is not always the most up-to-date method.
+            If you are aware of a better approach, we would of course be interested in learning and improving this document.
+          </p>
+
+          <!--Tools-->
+          <h2 id="tools" >Basic Tools</h2>
+
+            <h3>Terminal Emulator</h3>
+              
+              <p>
+                "Terminal emulators" (terminal) are applications that give you a text-based interface with your computer.
+                This text-based interface is called the "command line," where you can execute commands within a "shell" (the name for the program running in the terminal),
+              </p>
+              <p>
+                While not all scientific computing happens in a terminal, a significant amount does, and it can be a great tool once you're familiar with it.
+                In fact, even if you don't primarily use a terminal, it's almost guranteed that you will use it to some extent; therefore, it's worth at least becoming comfortable with the terminal.
+              </p>
+              <p>
+                In principle, any terminal is going to be more or less the same; we will walk through how to get started and what options are available below.
+              </p>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                  macOS comes with a preinstalled terminal, appropriately named <code>Terminal.app</code>.
+                  <code>Terminal.app</code> will more than suffice for your computing needs with many modern features (e.g., tabs) and is easily customizable.
+                  If you want to explore alternative terminals on macOS, some to consider are <a class="link dim" href="https://iterm2.com/">iTerm2</a>, <a class="link dim" href="https://hyper.is/">Hyper</a>, <a class="link dim" href="https://sw.kovidgoyal.net/kitty/">Kitty</a>, and <a class="link dim" href="https://github.com/alacritty/alacritty">Alacritty</a>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                  If you anticipate using computational tools heavily, you may want to strongly consider using the <a class="link dim" href="https://docs.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux</a> (WSL).
+                  This provides a Linux shell accessible within your user space on Windows and will allow you to run softwares made for Linux (which includes a large number of scientific software).
+                  A number of Linux distributions are available for WSL; if you have no or limited prior experience with Linux, <a class="link dim" href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?cid=msft_web_chart&activetab=pivot:overviewtab">Ubuntu</a> is typically a good place to start.
+                </p>
+                <p>
+                  Windows comes with a preinstalled terminal, <code>cmd.exe</code>.
+                  While you can make it work, <code>cmd.exe</code> is a bit rudimentary in terms of features and customizability.
+                  Fortunately, Microsoft is aware of this and has recently released <a class="link dim" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab">Windows Terminal</a>, which includes many modern features and is easily customizable; it is also a very good option for integrating with PowerShell and WSL.
+                  If you want to explore alternative terminals on Windows, some to consider are <a class="link dim" href="https://cmder.net/">cmder</a>, <a class="link dim" href="https://hyper.is/">Hyper</a>, and <a class="link dim" href="https://github.com/alacritty/alacritty">Alacritty</a>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                  Any distribution of Linux will provide some access to a terminal, whether it's via <code>tty</code> or with an application included in the desktop environment.
+                  One of the most popular Linux desktop environments is <a class="link dim" href="https://www.gnome.org/">Gnome</a> (the default desktop environment for Ubuntu, Fedora, etc.), which includes <a class="link dim" href="https://wiki.gnome.org/Projects/GnomeShell">Gnome Shell</a>.
+                  Whether Gnome Shell or a different terminal provided by your distribution, you will likely be more than fine with the default terminal.
+                  If you want to explore alternative terminals on Linux, a fairly comprehensive list can be found on the <a class="link dim" href="https://wiki.archlinux.org/title/List_of_applications#Terminal_emulators">ArchWiki</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
+                  To get a terminal on Chrome OS, you will first need to setup something called a "Linux Container."
+                  To setup Linux on a Chromebook, follow the <a class="link dim" href="https://chromeos.dev/en/linux/setup">Chrome OS developer instructions</a> (the guide <a class="link dim" href="https://support.google.com/chromebook/answer/9145439">here</a> may be more accessible).
+                  Note that this Linux container is based off of a distribution of Linux called <a class="link dim" href="https://www.debian.org/">Debian</a>, which also serves as the basis for other popular Linux distributions including Ubuntu.
+                  The Chrome OS Linux container includes a <a class="link dim" href="https://chromeos.dev/en/productivity/terminal">Terminal</a>, which will give you everything you need going forward.
+                </p>
+              </details>
+
+            <h3>Text Editor</h3>
+
+              <p>
+                Some of the most useful programs are what is known as "text editors."
+                These text editors are unlike Microsoft Word, Pages, or Google Docs (which are referred as "What You See is What You Get", or WYSIWYG, editors) in that they directly edit the contents of a file (that is, they work with "raw" text data).
+                This is important because software is typically written as raw text (with file extensions simply denoting the language of the program; e.g., <code>.py</code> for Python scripts), and data from experiments are typically stored as raw text (unless you are working with large amounts of data, in which case it is typically compressed and looks like gibberish when viewed with a text editor).
+              </p>
+              <p>
+                Text editors typically come in three varieties: command line text editors, graphical text editors, and integrated development environments.
+                Command line text editors run directly inside your terminal; they are idiomatic in a terminal-based workflow, but can be difficult to use effectively at first (that said, the payoff is great if you do become familiar with them).
+                Graphical text editors are more "modern" in that they run as a graphical program similar to most applications; these will likely feel more natural for those who were born after 2000.
+                Integrated development envrionments (IDEs) are graphical programs which include a text editor among many other tools related for software development; they can be overwhelming at first and many of their features go beyond what is typically needed by scientists of their computer programs; note that most IDEs are tailored for specific programming languages (e.g., Python).
+              </p>
+              <p>
+                The easiest option for any of the operating systems below is to use a graphical text editors, as these will not have the steep learning curve typically associated with command line text editors while not being as overwhelming as IDEs; indeed, they work excellently for most people that do scientific computing.
+              </p>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                  macOS comes with several command line text editors by default, including <code>nano</code>, <code>vim</code>, and <code>emacs</code>.
+                  <code>nano</code> is the easiest to use but the least "powerful" (it is fairly limited in its functionality).
+                  <code>vim</code> and <code>emacs</code> are both difficult to learn but can be extremely useful once you are reasonably familiar with either of them; their users are in a <a class="link dim" href="https://en.wikipedia.org/wiki/Editor_war">friendly rivalry</a>.
+                  Note that these editors are widely available on most machines running Linux; this means that learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
+                  A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of <code>nano</code> with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
+                </p>
+                <p>
+                  While the preinstalled application <code>TextEdit.app</code> is capable of editing files, it lacks any feautres that are useful for writing code.
+                  There are many great graphical text editors available for macOS, including <a class="link dim" href="https://atom.io/">Atom</a>, <a class="link dim" href="https://code.visualstudio.com/">VS Code</a>, and <a class="link dim" href="https://www.sublimetext.com/">Sublime Text</a>.
+                </p>
+                <p>
+                  One of the most popular Python IDEs is <a class="link dim" href="https://www.jetbrains.com/pycharm/">PyCharm</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                  While Windows does not come with any command line text editors preinstalled, many can be downloaded for use with Windows Terminal or are included as part of WSL.
+                  Some of the more popular command line text editors are <code>vim</code> and <code>emacs</code>, which can be difficult to learn but extremely useful once you are reasonably familiar with either of them; they are typically installed by default on computers running Linux, so learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
+                  A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of a rudimentary text editor, <code>nano</code>, with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
+                </p>
+                <p>
+                  While the preinstalled application <code>Notepad.app</code> is capable of editing files, it lacks many of the feautres that are useful for writing code.
+                  There are many great graphical text editors available for Windows, including <a class="link dim" href="https://atom.io/">Atom</a>, <a class="link dim" href="https://code.visualstudio.com/">VS Code</a>, and <a class="link dim" href="https://www.sublimetext.com/">Sublime Text</a>.
+                </p>
+                <p>
+                  One of the most popular Python IDEs is <a class="link dim" href="https://www.jetbrains.com/pycharm/">PyCharm</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                  Most Linux distributions come with several command line text editors by default, often including <code>nano</code>, <code>vi</code>/<code>vim</code>, and <code>emacs</code>.
+                  <code>nano</code> is the easiest to use but the least "powerful" (it is fairly limited in its functionality).
+                  <code>vim</code> and <code>emacs</code> are both difficult to learn but can be extremely useful once you are reasonably familiar with either of them; their users are in a <a class="link dim" href="https://en.wikipedia.org/wiki/Editor_war">friendly rivalry</a>.
+                  A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of <code>nano</code> with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
+                </p>
+                <p>
+                  If you are using the Gnome desktop environment, the graphical text editor <a class="link dim" href="https://wiki.gnome.org/Apps/Gedit">Gedit</a> should be installed by default; several distributions also install Gedit by default, and it is easily available otherwise.
+                </p>
+                <p>
+                  A fairly comprehensive list of text editors available on Linux can be found on the <a class="link dim" href="https://wiki.archlinux.org/title/List_of_applications/Documents#Text_editors">ArchWiki</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
+                  Because of the nature of using the Linux container, the specifics for Chome OS are the same as those for Linux.
+                </p>
+                <p>
+                  The default text editor for Debian is <code>nano</code>, but <code>vim</code> should also be preinstalled.
+                  <code>nano</code> is among the easiest to use but the least "powerful" (it is fairly limited in its functionality).
+                  <code>vim</code> is difficult to learn but can be extremely useful once you are reasonably familiar with it.
+                  A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of <code>nano</code> with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
+                </p>
+                <p>
+                  A common graphical text editor for Linux is <a class="link dim" href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>, which should be easy to install.
+                </p>
+                <p>
+                  A fairly comprehensive list of text editors available on Linux can be found on the <a class="link dim" href="https://wiki.archlinux.org/title/List_of_applications/Documents#Text_editors">ArchWiki</a>.
+                </p>
+              </details>
+
+            <h3>Remote Access</h3>
+
+              <p>
+                Because so much of scientific computing involves running complex algorithms on large datasets, these processes are typically done on computing clusters hosted by universities or national labs.
+                Therefore, if you anticipate needing to run code or work with data on anything other than your local machine, you will need a way of connecting to these remote computing clusters.
+              </p>
+              <p>
+                The remote connection protocal used in most computing is SSH (Secure SHell).
+                The typical syntax for connecting to a computer with SSH is
+              </p>
+              <pre>ssh {username}@{computer.domain}</pre>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                  macOS comes with an implementation of SSH.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                  Windows comes with an implementation of SSH.
+                  If you are using WSL, the Linux distrubiton should also come with SSH; if it does not, the <a class="link dim" href="https://www.openssh.com/">OpenSSH</a> implementation should be readily available through the distribution's package manager.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                  Most Linux distributions come with an implementation of SSH.
+                  If your system does not have it by default, it should be readily available through your distribution's package manger; the most common implementation on Linux is <a class="link dim" href="https://www.openssh.com/">OpenSSH</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
+                  The Debian Linux container should come with an implementation of SSH.
+                  If, for whatever reason, it is not installed by default, you can install <a class="link dim" href="https://www.openssh.com/">OpenSSH</a> with the following command:
+                </p>
+                <pre>apt install openssh-client</pre>
+              </details>
+
+            <h3>X Windows System</h3>
+
+              <p>
+                The <a class="link dim" href="https://x.org/wiki/">X Windows System</a> (X) is a ubiquitous framework for drawing graphics (including images and applications) and a standard protocol for interfacing with graphical output from remote computers.
+              </p>
+              <p>
+                While the general community is slowly moving towards <a class="link dim" href="https://wayland.freedesktop.org/">Wayland</a> (a modern replacement for X), scientific computing tends to adopt new technologies more slowly given the dependence on legacy software.
+                As such, it is generally useful to have an installation of X (or some compatability) on your local machine, especially if you are running older codes or connecting to remote machines.
+              </p>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                  The standard macOS implementation of X is <a class="link dim" href="https://www.xquartz.org/">XQuartz</a>.
+                  It is generally recommended that you install XQuartz (along with other useful softwares) via a minimal installation of Xcode:
+                  <pre>xcode-select --install</pre>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                  One of the most popular implementations of X for Windows is <a class="link dim" href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a>.
+                  Note that the VcXsrv application must be running in order to use the window forwarding features (i.e., so that you can view graphics from remote connections).
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                  Most Linux distributions will use either an implementation of X (typically <a class="link dim" href="https://www.x.org/wiki/">Xorg</a>) or <a class="link dim" href="https://wayland.freedesktop.org/">Wayland</a> (with <a class="link dim" href="https://wayland.freedesktop.org/xserver.html">XWayland</a> for compatibility) for graphics.
+                  As such, there is typically nothing more you need to do.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
+                  As detailed in the <a class="link dim" href="https://chromeos.dev/en/linux/linux-on-chromeos-deep-dive#runtime-features">Runtime features</a>, the Linux container includes support for X programs by default.
+                </p>
+              </details>
+
+          <!--Python-->
+          <h2 id="python">Python</h2>
+
+            <p>
+              At this point, most daily scientific computing is done with <a class="link dim" href="https://www.python.org/">Python</a>.
+              We will cover common solutions for environments and package management for Python which you are likely to see while doing scientific computing.
+            </p>
+            <p>
+              Note that, while your system may come with Python preinstalled (particularly if you are running macOS or Linux), we strongly advise that you use Conda and its Python environments rather than your system Python.
+              This makes problems with conflicting packages (and possibly breaking aspects of your operating system) significantly less likely in the future.
+            </p>
+
+            <h3>Conda</h3>
+
+              <p>
+                <a class="link dim" href="https://docs.conda.io/en/latest/">Conda</a> has become the defacto standard for managing environments as well as installing packages in Python for scientific computing.
+                There are several reasons for this; the two most salient are (1) Conda can include non-Python software, which is frequently used in scientific Python packages (importantly, using Python's built-in <code>venv</code> and <code>pip</code> will not always be able to install every necessary dependency for a given scientific library), and (2) Conda environments can be easily shared with others (this is especially useful when trying to make sure that collaborators are using compatible versions of software).
+              </p>
+              <p>
+                There are several common distributions of Conda available, the two most common being <a class="link dim" href="https://www.anaconda.com/">Anaconda</a> and <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>; the primary practical difference is that Anaconda comes with many common packages by default in its base environment, whereas Miniconda is a minimal installation.
+                Note that you will want only one of Anaconda or Miniconda.
+                Advanced users may be interested in using <a class="link dim" href="https://github.com/mamba-org/mamba">mamba</a>, which can be readily installed through Conda.
+              </p>
+              <p>
+                Most software can simply be installed with the following syntax:
+              </p>
+              <pre>conda install {package}</pre>
+              <p>
+                Some software is unavailable through the default Conda channels.
+                In this case, it may be available through <a class="link dim" href="https://conda-forge.org/">conda-forge</a>:
+              </p>
+              <pre>conda install -c conda-forge {package}</pre>
+              <p>
+                There are still some software which is unavailable through the Conda channels.
+                Of course, <code>pip</code> is compatible with Conda; in fact, each Conda environment has its own "proper" <code>pip</code> to reduce the possibility of package conflicts.
+                To install a package with <code>pip</code>, the syntax is
+              </p>
+              <pre>pip install {package}</pre>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                  The macOS Miniconda installers are available <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#macosx-installers">here</a>.
+                  We recommend that you use the most recent Python version.
+                </p>
+                <p>
+                  The Anaconda download is available <a class="link dim" href="https://www.anaconda.com/products/individual">here</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                  The Windows Miniconda installers are available <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#windows-installers">here</a>.
+                  If you are using WSL, you will want the Linux Miniconda installers <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">here</a>.
+                  We recommend that you use the most recent Python version.
+                </p>
+                <p>
+                  The Anaconda download is available <a class="link dim" href="https://www.anaconda.com/products/individual">here</a>.
+                  Note that, if you are using WSL, you may have to click "Get Additional Installers" for the Linux installer.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                  The Linux Miniconda installers are available <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">here</a>.
+                  We recommend that you use the most recent Python version.
+                </p>
+                <p>
+                  The Anaconda download is available <a class="link dim" href="https://www.anaconda.com/products/individual">here</a>.
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
+                  The Linux Miniconda installers are available <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">here</a>.
+                  We recommend that you use the most recent Python version.
+                </p>
+                <p>
+                  The Anaconda download is available <a class="link dim" href="https://www.anaconda.com/products/individual">here</a>.
+                </p>
+              </details>
+
+          <!--Git-->
+          <h2 id="git">Git</h2>
+
+            <p>
+              <a class="link dim" href="https://git-scm.com/">Git</a> is among the most ubiquitous tools for version control in computing in general.
+              Version control allows changes in projects to be tracked in a robust way and enables collaborators to develop code independently and merge their changes when they are done.
+              Many codes are publicly hosted on <a class="link dim" href="https://github.com/">GitHub</a> or <a class="link dim" href="https://bitbucket.org">Bitbucket</a>.
+            </p>
+            <p>
+              Alongside the <a class="link dim" href="https://git-scm.com/docs">Git-SCM documentation</a>, GitHub provides a number of helpful tutorials for beginners; a few to take a look at first are <a class="link dim" href="https://guides.github.com/introduction/git-handbook/">git-handbook</a>, <a class="link dim" href="https://guides.github.com/introduction/flow/">flow</a>, <a class="link dim" href="https://guides.github.com/activities/hello-world/">hello-world</a>, and <a class="link dim" href="https://guides.github.com/activities/forking/">forking</a>.
+            </p>
+            <p>
+              While the command line interface <code>git</code> is the most common way to see people working with Git (perhaps, aside from GitHub), a number of graphical interfaces also exist.
+              These can be particularly helpful if you prefer visual representations of problems.
+            </p>
+
+            <details>
+              <summary class="">macOS</summary>
+              <p>
+                macOS comes with <code>git</code> preinstalled.
+              </p>
+              <p>
+                There are a number of graphical interfaces for Git available for macOS, including <a class="link dim" href="https://desktop.github.com/">GitHub Desktop</a>, <a class="link dim" href="https://www.sublimemerge.com">Sublime Merge</a>, and <a class="link dim" href="https://www.gitkraken.com">GitKraken</a>.
+                Note that graphical text editors often have plugins available for interfacing with Git and/or GitHub; in particular, Atom (<a class="link dim" href="https://atom.io/packages/git-plus">Git</a>, <a class="link dim" href="https://github.atom.io/">GitHub</a>) and VS Code (<a class="link dim" href="https://code.visualstudio.com/Docs/editor/versioncontrol#_git-support">Git</a>, <a class="link dim" href="https://code.visualstudio.com/docs/editor/github">GitHub</a>).
+              </p>
+            </details>
+
+            <details>
+              <summary class="">Windows</summary>
+              <p>
+                You can download Git for Windows <a class="link dim" href="https://git-scm.com/download/win">here</a>.
+              </p>
+              <p>
+                There are a number of graphical interfaces for Git available for Windows, including <a class="link dim" href="https://desktop.github.com/">GitHub Desktop</a>, <a class="link dim" href="https://www.sublimemerge.com">Sublime Merge</a>, and <a class="link dim" href="https://www.gitkraken.com">GitKraken</a>.
+                Note that graphical text editors often have plugins available for interfacing with Git and/or GitHub; in particular, Atom (<a class="link dim" href="https://atom.io/packages/git-plus">Git</a>, <a class="link dim" href="https://github.atom.io/">GitHub</a>) and VS Code (<a class="link dim" href="https://code.visualstudio.com/Docs/editor/versioncontrol#_git-support">Git</a>, <a class="link dim" href="https://code.visualstudio.com/docs/editor/github">GitHub</a>).
+              </p>
+            </details>
+
+            <details>
+              <summary class="">Linux</summary>
+              <p>
+                Most distributions of Linux come with <code>git</code> preinstalled (Git and the Linux kernel were both authored by Linus Torvalds).
+                If your system does not have <code>git</code>, it should be readily available through your distribution's package manager.
+              </p>
+              <p>
+                There are a number of graphical interfaces for Git available for Linux, including <a class="link dim" href="https://www.sublimemerge.com">Sublime Merge</a> and <a class="link dim" href="https://www.gitkraken.com">GitKraken</a>; see the <a class="link dim" href="https://wiki.archlinux.org/title/Git#Graphical_front-ends">ArchWiki</a> for a fairly comprehensive list.
+                Note that graphical text editors often have plugins available for interfacing with Git and/or GitHub; in particular, Atom (<a class="link dim" href="https://atom.io/packages/git-plus">Git</a>, <a class="link dim" href="https://github.atom.io/">GitHub</a>) and VS Code (<a class="link dim" href="https://code.visualstudio.com/Docs/editor/versioncontrol#_git-support">Git</a>, <a class="link dim" href="https://code.visualstudio.com/docs/editor/github">GitHub</a>).
+              </p>
+            </details>
+
+            <details>
+              <summary class="">Chrome OS</summary>
+              <p>
+                If your Debian Linux container does not have <code>git</code> preinstalled, you can install it with
+              </p>
+              <pre>apt install git</pre>
+              <p>
+                There are a number of graphical interfaces for Git available for Linux, including <a class="link dim" href="https://www.sublimemerge.com">Sublime Merge</a> and <a class="link dim" href="https://www.gitkraken.com">GitKraken</a>; see the <a class="link dim" href="https://wiki.archlinux.org/title/Git#Graphical_front-ends">ArchWiki</a> for a fairly comprehensive list; in principle, most of these should be compatiable with the Debian Linux container.
+                Note that graphical text editors often have plugins available for interfacing with Git and/or GitHub; in particular, Atom (<a class="link dim" href="https://atom.io/packages/git-plus">Git</a>, <a class="link dim" href="https://github.atom.io/">GitHub</a>) and VS Code (<a class="link dim" href="https://code.visualstudio.com/Docs/editor/versioncontrol#_git-support">Git</a>, <a class="link dim" href="https://code.visualstudio.com/docs/editor/github">GitHub</a>).
+              </p>
+            </details>
+
+
+      </div>
+
+    </main>
+
+  </body>
+</html>
