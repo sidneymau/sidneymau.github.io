@@ -32,13 +32,15 @@
         body {background-color: #FFFFFF; color: #000000;}
         header {background-color: #FFFFFF: #000000;}
         pre {background-color: #F4F4F4;}
-        .link {color: #0065B3;}
+        .link {color: #357EDD;}
+        .advice {background-color: #9EEBCF;}
       }
       @media (prefers-color-scheme: dark) {
         body {background-color: #111111; color: #EEEEEE;}
         header {background-color: #111111; color: #EEEEEE;}
         pre {background-color: #333333;}
-        .link {color: #9CDCFE;}
+        .link {color: #357EDD;}
+        .advice {background-color: #19A974;}
       }
     </style>
   </head>
@@ -161,7 +163,6 @@
                   macOS comes with several command line text editors by default, including <code>nano</code>, <code>vim</code>, and <code>emacs</code>.
                   <code>nano</code> is the easiest to use but the least "powerful" (it is fairly limited in its functionality).
                   <code>vim</code> and <code>emacs</code> are both difficult to learn but can be extremely useful once you are reasonably familiar with either of them; their users are in a <a class="link dim" href="https://en.wikipedia.org/wiki/Editor_war">friendly rivalry</a>.
-                  Note that these editors are widely available on most machines running Linux; this means that learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
                   A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of <code>nano</code> with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
                 </p>
                 <p>
@@ -177,7 +178,7 @@
                 <summary class="">Windows</summary>
                 <p>
                   While Windows does not come with any command line text editors preinstalled, many can be downloaded for use with Windows Terminal or are included as part of WSL.
-                  Some of the more popular command line text editors are <code>vim</code> and <code>emacs</code>, which can be difficult to learn but extremely useful once you are reasonably familiar with either of them; they are typically installed by default on computers running Linux, so learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
+                  Some of the more popular command line text editors are <code>vim</code> and <code>emacs</code>, which can be difficult to learn but extremely useful once you are reasonably familiar with either of them.
                   A more modern terminal-based text editor is <a class="link dim" href="https://micro-editor.github.io/">micro</a>, which combines the ease-of-use of a rudimentary text editor, <code>nano</code>, with some of the power and flexibility of <code>vim</code> and <code>emacs</code>.
                 </p>
                 <p>
@@ -222,6 +223,15 @@
                 <p>
                   A fairly comprehensive list of text editors available on Linux can be found on the <a class="link dim" href="https://wiki.archlinux.org/title/List_of_applications/Documents#Text_editors">ArchWiki</a>.
                 </p>
+              </details>
+
+              <details class="advice">
+                <summary>Tips and Advice</summary>
+                <ul class="list">
+                  <li>
+                    Terminal-based text editors, including <code>nano</code>, <code>vim</code>, and <code>emacs</code>, are typically installed by default on computers running Linux, so learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
+                  </li>
+                </ul>
               </details>
 
             <h3>Remote Access</h3>
@@ -395,6 +405,22 @@
                 </p>
               </details>
 
+              <details class="advice">
+                <summary>Tips and Advice</summary>
+                <ul class="list">
+                  <li>
+                    If you enjoy maintaining the software on your computer (starting from scratch, updating, etc.) or you anticipate needing to use fairly different software across a number of projects, then Miniconda may be a better option for you.
+                    Otherwise, Anaconda is at the very least a good first place to start for many people.
+                  </li>
+                  <li>
+                    It is usually recommended that you make a new Conda environment for each project you're working.
+                    Using environments helps reduce the possibility of package conflicts (e.g., where one package you'ure using requires a different version of some package that anaother package requires).
+                    Conda starts with a default <code>(base)</code> environment; it is generally recommended that you don't install new packages in the base environment but rather in specific project environments.
+                    Follow the documentation <a class="link dim" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">here</a> for managing Conda environments.
+                  </li>
+                </ul>
+              </details>
+
             <h3>Jupyter Notebooks</h3>
 
               <p>
@@ -435,6 +461,19 @@
                 </p>
               </details>
               -->
+
+              <details class="advice">
+                <summary>Tips and Advice</summary>
+                <ul class="list">
+                  <li>
+                    Using <a class="link dim" href="https://ipywidgets.readthedocs.io/en/latest/">jupyer-widgets</a> can add helpful functionality to your notebooks.
+                    For instance, one particularly useful widget is <a class="link dim" href="https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html">interact</a>.
+                  </li>
+                  <li>
+                    The "next-generation" version of Jupyter notebooks is <a class="link dim" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">JupyterLab</a>.
+                  </li>
+                </ul>
+              </details>
 
           <!--Git-->
           <h2 id="git">Git</h2>
@@ -497,6 +536,19 @@
                 Note that graphical text editors often have plugins available for interfacing with Git and/or GitHub; in particular, Atom (<a class="link dim" href="https://atom.io/packages/git-plus">Git</a>, <a class="link dim" href="https://github.atom.io/">GitHub</a>) and VS Code (<a class="link dim" href="https://code.visualstudio.com/Docs/editor/versioncontrol#_git-support">Git</a>, <a class="link dim" href="https://code.visualstudio.com/docs/editor/github">GitHub</a>).
               </p>
             </details>
+
+            <details class="advice">
+              <summary>Tips and Advice</summary>
+              <ul class="list">
+                <li>
+                  Don't forget to commit and pull (resolving any merge conflicts) before pushing!
+                </li>
+                <li>
+                  It is often recommended to make a separate branch when developing code, while leaving the main (previously master) branch in a stable state.
+                </li>
+              </ul>
+            </details>
+
 
 
       </div>
