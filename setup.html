@@ -65,15 +65,16 @@
 
           <p>
             This guide is an attempt to gather some information for setting up your computer for scientific computing.
+            This guide aims to be general rather than comprehensive.
           </p>
           <p>
-            General information is interspersed with advice specific to individual operating systems.
-            This was a conscious choice to show how much of this is (or is not) applicable across systems.
+            Note that general information is interspersed with advice specific to individual operating systems.
+            This was a conscious choice to show how much of this content is (or is not) applicable across systems.
             Some of you may find that you need to use several operating systems (especially if using computing clusters), in which case it can be helpful to compare more directly.
           </p>
           <p>
             Please note that the advice given here is the result of the authors collective workflows and knowledge over the years; this means that it is not always the most up-to-date method.
-            If you are aware of a better approach, we would of course be interested in learning and improving this document.
+            If you are aware of a better approach, we would of course be interested in learning and improving this document—don't forget: it is likely that you know your own machine and software better than we do.
           </p>
 
           <!--Tools-->
@@ -82,7 +83,7 @@
             <h3>Terminal Emulator</h3>
               
               <p>
-                "Terminal emulators" (terminal) are applications that give you a text-based interface with your computer.
+                "Terminal emulators" (terminals) are applications that give you a text-based interface with your computer.
                 This text-based interface is called the "command line," where you can execute commands within a "shell" (the name for the program running in the terminal),
               </p>
               <p>
@@ -391,6 +392,45 @@
                 </p>
                 <p>
                   The Anaconda download is available <a class="link dim" href="https://www.anaconda.com/products/individual">here</a>.
+                </p>
+              </details>
+
+            <h3>Jupyter Notebooks</h3>
+
+              <p>
+                <a class="link dim" href="https://jupyter.org/">Jupyter</a> notebooks are an increasingly popular method of writing and running code, especially within the scientific community.
+                While they have their <a class="link dim" href="https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit#slide=id.g362da58057_0_1">detractors</a>, they appear to be here to stay and so it is important to at least be familiar with them and able to run them.
+              </p>
+              <p>
+                Anaconda comes with <code>jupyter</code> installed by default; if you are using Miniconda, then you will need to install <code>jupyter</code>:
+              </p>
+              <pre>conda install jupyter</pre>
+              <p>
+                A Jupyter notebook sever that runs in your browser may be initialized with
+              </p>
+              <pre>jupyter notebook</pre>
+
+              <details>
+                <summary class="">macOS</summary>
+                <p>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Windows</summary>
+                <p>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Linux</summary>
+                <p>
+                </p>
+              </details>
+
+              <details>
+                <summary class="">Chrome OS</summary>
+                <p>
                 </p>
               </details>
 
