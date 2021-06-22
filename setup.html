@@ -107,7 +107,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                   If you anticipate using computational tools heavily, you may want to strongly consider using the <a class="link dim" href="https://docs.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux</a> (WSL).
                   This provides a Linux shell accessible within your user space on Windows and will allow you to run software made for Linux (which includes a large number of scientific software).
@@ -176,7 +176,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                   While Windows does not come with any command line text editors preinstalled, many can be downloaded for use with Windows Terminal or are included as part of WSL.
                   Some of the more popular command line text editors are <code>vim</code> and <code>emacs</code>, which can be difficult to learn but extremely useful once you are reasonably familiar with either of them.
@@ -230,6 +230,9 @@
                 <summary>Tips and Advice</summary>
                 <ul class="list">
                   <li>
+                    If the number of options here is overwhelming, <a class="link dim" href="https://atom.io/">Atom</a> is a good place to start—it works well on all main operating systems, it has a robust plugin ecosystem, it is relatively easy to customize, and it is free and open source.
+                  </li>
+                  <li>
                     Terminal-based text editors, including <code>nano</code>, <code>vim</code>, and <code>emacs</code>, are typically installed by default on computers running Linux, so learning at least one of them will give you a familiar tool on nearly any computer you connect to for work.
                   </li>
                 </ul>
@@ -255,7 +258,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                   Windows comes with an implementation of SSH.
                   If you are using WSL, the Linux distribution should also come with SSH; if it does not, the <a class="link dim" href="https://www.openssh.com/">OpenSSH</a> implementation should be readily available through the distribution's package manager.
@@ -279,6 +282,16 @@
                 <pre>apt install openssh-client</pre>
               </details>
 
+              <details class="advice">
+                <summary>Tips and Advice</summary>
+                <ul class="list">
+                  <li>
+                    Note that, while you can view graphics and graphical programs over remote connections using the X Windows System (see below), this can be quite slow when your internet connection is low or unstable.
+                    In that case, you may need to be comfortable with working from within a terminal (e.g., using a command line text editor).
+                  </li>
+                </ul>
+              </details>
+
             <h3>X Windows System</h3>
 
               <p>
@@ -299,7 +312,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                   One of the most popular implementations of X for Windows is <a class="link dim" href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a>.
                   Note that the VcXsrv application must be running in order to use the window forwarding features (i.e., so that you can view graphics from remote connections).
@@ -372,7 +385,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                   The Windows Miniconda installers are available <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#windows-installers">here</a>.
                   If you are using WSL, you will want the Linux Miniconda installers <a class="link dim" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">here</a>.
@@ -445,7 +458,7 @@
               </details>
 
               <details>
-                <summary class="">Windows</summary>
+                <summary class="">Windows 10</summary>
                 <p>
                 </p>
               </details>
@@ -504,7 +517,7 @@
             </details>
 
             <details>
-              <summary class="">Windows</summary>
+              <summary class="">Windows 10</summary>
               <p>
                 You can download Git for Windows <a class="link dim" href="https://git-scm.com/download/win">here</a>.
               </p>
